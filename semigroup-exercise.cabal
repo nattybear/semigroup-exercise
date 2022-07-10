@@ -13,5 +13,6 @@ executable semigroup-exercise
   other-modules:    Trivial
                   , Identity
                   , Two
+                  , Three
   hs-source-dirs:   app
   default-language: Haskell2010

@@ -2,6 +2,7 @@ module Main where
 
 import Identity
 import Test.QuickCheck
+import Three
 import Trivial
 import Two
 
@@ -13,3 +14,4 @@ main = do
   quickCheck (semigroupAssoc :: TrivAssoc)
   quickCheck (semigroupAssoc :: IdAssoc)
   quickCheck (semigroupAssoc :: TwoAssoc)
+  quickCheck (semigroupAssoc :: ThreeAssoc)
