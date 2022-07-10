@@ -11,5 +11,6 @@ executable semigroup-exercise
   build-depends:    base ^>=4.12.0.0
                   , QuickCheck
   other-modules:    Trivial
+                  , Identity
   hs-source-dirs:   app
   default-language: Haskell2010
