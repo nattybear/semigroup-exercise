@@ -15,5 +15,6 @@ executable semigroup-exercise
                   , Two
                   , Three
                   , Four
+                  , BoolConj
   hs-source-dirs:   app
   default-language: Haskell2010
