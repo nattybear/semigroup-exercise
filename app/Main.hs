@@ -4,6 +4,7 @@ module Main
   ) where
 
 import BoolConj
+import BoolDisj
 import Four
 import Identity
 import Test.QuickCheck
@@ -22,3 +23,4 @@ main = do
   quickCheck (semigroupAssoc :: ThreeAssoc)
   quickCheck (semigroupAssoc :: FourAssoc)
   quickCheck (semigroupAssoc :: BoolConjAssoc)
+  quickCheck (semigroupAssoc :: BoolDisjAssoc)
