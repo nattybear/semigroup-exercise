@@ -6,9 +6,9 @@ newtype BoolDisj = BoolDisj Bool
                  deriving (Eq, Show)
 
 instance Semigroup BoolDisj where
-  BoolDisj False <> _              = BoolDisj False
-  BoolDisj True  <> BoolDisj False = BoolDisj False
-  _              <> _              = BoolDisj True
+  BoolDisj _     <> BoolDisj True  = BoolDisj True
+  BoolDisj True  <> _              = BoolDisj True
+  _              <> _              = BoolDisj False
 
 instance Arbitrary BoolDisj where
   arbitrary = do

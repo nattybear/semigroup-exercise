@@ -1,5 +1,6 @@
 module Main
   ( module BoolConj
+  , module BoolDisj
   , main
   ) where
 
