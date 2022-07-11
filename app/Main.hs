@@ -1,4 +1,7 @@
-module Main where
+module Main
+  ( module BoolConj
+  , main
+  ) where
 
 import BoolConj
 import Four
