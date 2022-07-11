@@ -8,6 +8,7 @@ import BoolConj
 import BoolDisj
 import Four
 import Identity
+import Or
 import Test.QuickCheck
 import Three
 import Trivial
@@ -25,3 +26,4 @@ main = do
   quickCheck (semigroupAssoc :: FourAssoc)
   quickCheck (semigroupAssoc :: BoolConjAssoc)
   quickCheck (semigroupAssoc :: BoolDisjAssoc)
+  quickCheck (semigroupAssoc :: OrAssoc)
