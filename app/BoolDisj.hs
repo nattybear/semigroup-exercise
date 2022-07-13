@@ -10,6 +10,9 @@ instance Semigroup BoolDisj where
   BoolDisj True  <> _              = BoolDisj True
   _              <> _              = BoolDisj False
 
+instance Monoid BoolDisj where
+  mempty = BoolDisj False
+
 instance Arbitrary BoolDisj where
   arbitrary = do
     x <- arbitrary

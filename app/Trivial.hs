@@ -8,6 +8,9 @@ data Trivial = Trivial
 instance Semigroup Trivial where
   _ <> _ = Trivial
 
+instance Monoid Trivial where
+  mempty = Trivial
+
 instance Arbitrary Trivial where
   arbitrary = return Trivial
 

@@ -9,6 +9,9 @@ instance Semigroup BoolConj where
   BoolConj True <> BoolConj True = BoolConj True
   _             <> _             = BoolConj False
 
+instance Monoid BoolConj where
+  mempty = BoolConj True
+
 instance Arbitrary BoolConj where
   arbitrary = do
     x <- arbitrary
