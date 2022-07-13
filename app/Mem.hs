@@ -1,7 +1,5 @@
 module Mem where
 
-import Test.QuickCheck
-
 newtype Mem s a = Mem { runMem :: s -> (a, s) }
 
 instance Semigroup a => Semigroup (Mem s a) where
@@ -17,8 +15,8 @@ f' = Mem $ \s -> ("hi", s + 1)
 
 bar :: IO ()
 bar = do
-  let rmzero = runMem mempty 0
-      rmleft = runMem (f' <> mempty) 0
+  let rmzero  = runMem mempty 0
+      rmleft  = runMem (f' <> mempty) 0
       rmright = runMem (mempty <> f') 0
   print $ rmleft
   print $ rmright
