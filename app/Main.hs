@@ -1,21 +1,26 @@
 module Main
   ( module BoolConj
   , module BoolDisj
+  , module Combine
   , main
   ) where
 
 import BoolConj
 import BoolDisj
+import Combine
 import Four
 import Identity
 import Or
+import Two
 import Test.QuickCheck
 import Three
 import Trivial
-import Two
 
 semigroupAssoc :: (Eq m, Semigroup m) => m -> m -> m -> Bool
 semigroupAssoc a b c = (a <> (b <> c)) == ((a <> b) <> c)
+
+combineAssoc f g h x =
+  unCombine (f <> (g <> h)) x == unCombine ((f <> g) <> h) x
 
 main :: IO ()
 main = do
@@ -27,3 +32,4 @@ main = do
   quickCheck (semigroupAssoc :: BoolConjAssoc)
   quickCheck (semigroupAssoc :: BoolDisjAssoc)
   quickCheck (semigroupAssoc :: OrAssoc)
+  quickCheck (combineAssoc   :: CombineAssoc)
