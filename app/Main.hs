@@ -3,6 +3,7 @@ module Main
   , module BoolDisj
   , module Combine
   , module Comp
+  , module Mem
   , module Validation
   , main
   ) where
@@ -14,6 +15,7 @@ import Comp
 import Data.Monoid
 import Four
 import Identity
+import Mem
 import Or
 import Two
 import Test.QuickCheck
