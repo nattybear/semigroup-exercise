@@ -20,5 +20,6 @@ executable semigroup-exercise
                   , Or
                   , Combine
                   , Comp
+                  , Validation
   hs-source-dirs:   app
   default-language: Haskell2010

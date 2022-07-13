@@ -3,6 +3,7 @@ module Main
   , module BoolDisj
   , module Combine
   , module Comp
+  , module Validation
   , main
   ) where
 
@@ -17,6 +18,7 @@ import Two
 import Test.QuickCheck
 import Three
 import Trivial
+import Validation
 
 semigroupAssoc :: (Eq m, Semigroup m) => m -> m -> m -> Bool
 semigroupAssoc a b c = (a <> (b <> c)) == ((a <> b) <> c)
@@ -39,3 +41,4 @@ main = do
   quickCheck (semigroupAssoc :: OrAssoc)
   quickCheck (combineAssoc   :: CombineAssoc)
   quickCheck (compAssoc      :: CompAssoc)
+  quickCheck (semigroupAssoc :: ValidationAssoc)
